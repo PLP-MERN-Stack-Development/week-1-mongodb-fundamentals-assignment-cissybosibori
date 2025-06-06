@@ -1,47 +1,77 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19717882&assignment_repo_type=AssignmentRepo)
-# MongoDB Fundamentals Assignment
+# 📚 MongoDB Fundamentals Assignment - Book Collection
 
-This assignment focuses on learning MongoDB fundamentals including setup, CRUD operations, advanced queries, aggregation pipelines, and indexing.
+This project demonstrates core MongoDB concepts using Node.js. It covers data insertion, CRUD queries, advanced filtering, aggregation pipelines, and indexing — all applied on a sample collection of books.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up a MongoDB database
-2. Perform basic CRUD operations
-3. Write advanced queries with filtering, projection, and sorting
-4. Create aggregation pipelines for data analysis
-5. Implement indexing for performance optimization
+## 🛠️ Tech Stack
 
-## Getting Started
+- Node.js  
+- MongoDB (local installation or MongoDB Atlas)  
+- Native MongoDB Driver for Node.js  
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+---
 
-## Files Included
+## 📁 Project Structure
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+week-1-mongodb-fundamentals-assignment-cissybosibori/
+├── insert_books.js # Script to insert initial book data
+├── queries.js # MongoDB queries: CRUD, advanced queries, indexing
+├── README.md # This documentation file
+├── package.json # Project dependencies and scripts
+├── node_modules/ # Installed Node.js modules
+└── screenshots/ # Sample screenshots (MongoDB Compass views, query results)
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+## ⚙️ Setup & Usage Instructions
 
-## Submission
+1. **Clone the repository**  
+   ```bash
+   git clone <your-repo-url>
+   cd week-1-mongodb-fundamentals-assignment-cissybosibori
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
 
-1. Complete all tasks in the assignment
-2. Add your `queries.js` file with all required MongoDB queries
-3. Include a screenshot of your MongoDB database
-4. Update the README.md with your specific setup instructions
+## Install dependencies
+npm install
 
-## Resources
+## Insert sample books into MongoDB
+Make sure MongoDB is running (locally or via Atlas).
+Then run
+node insert_books.js
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+## Run the queries script
+node queries.js
+
+View the data and queries output
+Open MongoDB Compass or Atlas and connect to your database to visually inspect the collections and results.
+
+📸 Sample Screenshots
+### Books Collection in MongoDB Compass  
+![Books Collection](./screenshots/books-1.png)
+![Books Collection](./screenshots/after.png)
+
+### Sample Query Output  
+![Books by Genre](./screenshots/queries-1.png)
+![Books by Genre](./screenshots/queries-2.png)
+
+
+✅ Features Implemented
+Inserted 12 sample books with fields: title, author, genre, published_year, price, in_stock
+
+Basic queries: find books by genre, author, publication year
+
+Update and delete operations on specific books
+
+Advanced queries using projection (title, author, price), sorting, pagination
+
+Aggregation pipelines for average price by genre, author with most books, books grouped by decade
+
+Indexes created on title and compound index on author + published_year fields
+
+Query performance analyzed with explain() method
+
+📬 Author
+Silvya Bosibori
+MongoDB Fundamentals Assignment | 2025
+
